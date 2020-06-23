@@ -3,10 +3,12 @@ package com.example.ecommerce;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.ecommerce.ui.home.Category;
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home,
-                R.id.nav_notif,
+                R.id.nav_notif (startActivity(Intent);),
                 R.id.nav_trans,
                 R.id.nav_like,
                 R.id.nav_profile,
@@ -148,8 +150,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_cart) {
-            Toast.makeText(getApplicationContext(), "Keranjang",
-                    Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "Keranjang",
+//                    Toast.LENGTH_LONG).show();
+
+            startActivity(new Intent(MainActivity.this, CartActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

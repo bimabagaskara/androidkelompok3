@@ -54,12 +54,21 @@
                         android:layout_height="wrap_content"
                         android:text="Nama Barang"
                         android:textStyle="bold"
-                        android:textColor="@color/colorRed"/>
+                        android:textColor="@color/colorRed"
+                        android:textSize="16sp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Kategori"/>
+                        android:text="Kategori"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 100.000"
+                        android:textStyle="bold"
+                        />
 
                     <View
                         android:layout_width="match_parent"
@@ -78,21 +87,24 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Juni, 12 2020"
-                            android:textSize="10sp"/>
+                            android:textSize="10sp"
+                            android:gravity="center"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="100 dilihat"
-                            android:textSize="10sp"/>
+                            android:textSize="10sp"
+                            android:gravity="center"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="3 komentar"
-                            android:textSize="10sp"/>
+                            android:textSize="10sp"
+                            android:gravity="center"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -207,6 +219,7 @@
         android:gravity="center">
 
         <TextView
+            android:id="@+id/txtBuy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="BELI SEKARANG"

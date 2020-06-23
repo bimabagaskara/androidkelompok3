@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_notif"
-        android:name="com.example.ecommerce.ui.notifikasi.Notif"
-        android:label="Notifikasi"
-        tools:layout="@layout/fragment_notif" />
-
-    <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.ecommerce.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"

@@ -2,9 +2,13 @@ package com.example.ecommerce;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +25,34 @@ import java.util.HashMap;
 public class DetailActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
     private SliderLayout mDemoSlider;
-    private TextView txtStore;
+    private TextView txtStore, txtBuy;
+    private Dialog dialog;
+
+    private void checkOut(){
+        dialog = new Dialog(DetailActivity.this);
+        dialog.setContentView(R.layout.dialog_add_cart);
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(true);
+        dialog.show();
+
+        Button btnPay = (Button) dialog.findViewById(R.id.btnPay);
+        TextView txtAdd = (TextView) dialog.findViewById(R.id.txtAdd);
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                startActivity(new Intent(DetailActivity.this, CartActivity.class));
+            }
+        });
+
+       txtAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                finish();
+            }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +61,13 @@ public class DetailActivity extends AppCompatActivity implements BaseSliderView.
 
         mDemoSlider = (SliderLayout)findViewById(R.id.slider);
         txtStore = (TextView) findViewById(R.id.txtStore);
+        txtBuy = (TextView) findViewById(R.id.txtBuy);
+        txtBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             checkOut();
+            }
+        });
 
         txtStore.setOnClickListener(new View.OnClickListener() {
             @Override
