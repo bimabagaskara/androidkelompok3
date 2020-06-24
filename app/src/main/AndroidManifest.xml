@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TransActivity"></activity>
+        <activity android:name=".StatusActivity"></activity>
+        <activity android:name=".TransActivity" />
         <activity android:name=".NotifActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".DetailActivity" />

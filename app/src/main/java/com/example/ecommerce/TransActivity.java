@@ -16,14 +16,6 @@ import com.google.android.material.tabs.TabLayout;
 
 public class TransActivity extends AppCompatActivity {
 
-    private final String[] PAGE_TITLES = new String[] {
-            "Pembelian", "Penjualan"
-    };
-
-    private final Fragment[] PAGES = new Fragment[] {
-            new Purchase(), new Sales()
-    };
-
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
 
@@ -35,7 +27,7 @@ public class TransActivity extends AppCompatActivity {
         setContentView(R.layout.activity_trans);
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        viewPager.setAdapter(new MainActivity.MyPagerAdapter(getSupportFragmentManager()));
+        viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
@@ -73,8 +65,8 @@ public class TransActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
-                case 0 : return "Produk";
-                case 1  : return "Kategori";
+                case 0 : return "Pembelian";
+                case 1  : return "Penjualan";
                 default: return null;
             }
 
