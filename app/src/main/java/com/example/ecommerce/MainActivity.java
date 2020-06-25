@@ -183,12 +183,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_trans) {
             startActivity(new Intent(MainActivity.this, TransActivity.class));
         } else if (id == R.id.nav_like) {
-
+            Toast.makeText(getApplicationContext(), "Barang Favorit", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_profile) {
+            startActivity(new Intent(MainActivity.this, ProfileActivity.class));
 
         } else if (id == R.id.nav_store) {
 
         } else if (id == R.id.nav_help) {
+
+        } else if (id == R.id.nav_logout) {
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

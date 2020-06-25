@@ -44,6 +44,7 @@ dependencies {
     implementation 'com.daimajia.slider:library:1.1.5@aar'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.xwray:passwordview:1.0'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
 
