@@ -1,5 +1,6 @@
 package com.example.ecommerce.ui.trans;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.ecommerce.MainActivity;
 import com.example.ecommerce.R;
+import com.example.ecommerce.StatusActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,6 +61,8 @@ public class Purchase extends Fragment {
 
                 String harga = ((TextView) view.findViewById(R.id.txtDesc)).getText().toString();
                 Toast.makeText(getActivity(), harga, Toast.LENGTH_LONG).show();
+
+                startActivity(new Intent(getActivity(), StatusActivity.class));
             }
         });
     }
