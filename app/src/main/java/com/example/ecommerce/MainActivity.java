@@ -23,7 +23,6 @@ import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -187,9 +186,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(getApplicationContext(), "Barang Favorit", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_profile) {
             startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-
         } else if (id == R.id.nav_store) {
-
+            startActivity(new Intent(MainActivity.this, StoreActivity.class));
         } else if (id == R.id.nav_help) {
 
         } else if (id == R.id.nav_logout) {

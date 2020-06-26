@@ -36,7 +36,7 @@ public class Product extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_product, container, false);
-        grdProduct = (GridView) view.findViewById(R.id.grdProduk);
+        grdProduct = (GridView) view.findViewById(R.id.grdProduct);
         setProduct();
 
         return view;
