@@ -25,6 +25,20 @@
                 android:layout_marginTop="5dp">
 
                 <EditText
+                    android:id="@+id/edtnama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Lengkap"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/edtemail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"/>
@@ -37,9 +51,10 @@
                 android:layout_marginTop="5dp">
 
                 <EditText
+                    android:id="@+id/edtgen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username"/>
+                    android:hint="Jenis Kelamin"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,18 +64,21 @@
                 android:layout_marginTop="5dp">
 
                 <EditText
+                    android:id="@+id/edtalamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telepon"/>
+                    android:hint="Alamat"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.xwray.passwordview.PasswordView
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password" />
 
             <Button
+                android:id="@+id/btnDaftar"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"

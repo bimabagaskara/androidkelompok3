@@ -44,7 +44,6 @@ public class DetailActivity extends AppCompatActivity implements BaseSliderView.
                 startActivity(new Intent(DetailActivity.this, CartActivity.class));
             }
         });
-
        txtAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
