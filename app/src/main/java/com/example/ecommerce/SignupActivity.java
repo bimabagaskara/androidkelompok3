@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ecommerce.Model.Daftar;
 import com.example.ecommerce.Model.PostPutDelDaftar;
 import com.example.ecommerce.Rest.ApiClient;
 import com.example.ecommerce.Rest.ApiInterface;
@@ -21,8 +22,7 @@ import retrofit2.Response;
 
 public class SignupActivity extends AppCompatActivity {
 
-    EditText edtnama, edtemail, edtgen, edtalamat;
-    PasswordView password;
+    EditText fullname, email, gender, address, password;
     Button btnDaftar;
     ApiInterface mApiInterface;
     TextView txtLogin;
@@ -32,51 +32,36 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-
-        edtnama = (EditText) findViewById(R.id.edtnama);
-        edtemail = (EditText) findViewById(R.id.edtemail);
-        edtgen = (EditText) findViewById(R.id.edtgen);
-        edtalamat = (EditText) findViewById(R.id.edtalamat);
-        password = (PasswordView) findViewById(R.id.password);
+        fullname = (EditText) findViewById(R.id.edtnama);
+        email = (EditText) findViewById(R.id.edtemail);
+        gender= (EditText) findViewById(R.id.edtgen);
+        address = (EditText) findViewById(R.id.edtalamat);
+        password = (EditText) findViewById(R.id.password);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         btnDaftar = (Button) findViewById(R.id.btnDaftar);
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<PostPutDelDaftar> postKontakCall = mApiInterface.postDaftar(edtnama.getText().toString(), edtemail.getText().toString(),
-                        edtgen.getText().toString(), edtalamat.getText().toString());
-                postKontakCall.enqueue(new Callback<PostPutDelDaftar>() {
+                Call<Daftar> postDaftar = mApiInterface.postDaftar2(fullname.getText().toString(),email.getText().toString(),gender.getText().toString(),address.getText().toString(),password.getText().toString());
+                postDaftar.enqueue(new Callback<Daftar>() {
                     @Override
-                    public void onResponse(Call<PostPutDelDaftar> call, Response<PostPutDelDaftar> response) {
-                        LoginActivity.ma.refresh();
-                        finish();
+                    public void onResponse(Call<Daftar> call, Response<Daftar> response) {
+                        Toast.makeText(SignupActivity.this,"Berhasil",Toast.LENGTH_LONG).show();
                     }
 
                     @Override
-                    public void onFailure(Call<PostPutDelDaftar> call, Throwable t) {
+                    public void onFailure(Call<Daftar> call, Throwable t) {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
                     }
 
-
                 });
-                txtLogin = (TextView) findViewById(R.id.txtLogin);
-                txtLogin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        finish(); //menutup activity
-                    }
-                });
-
                 getSupportActionBar().setTitle("Daftar");
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
-
-            public boolean onSupportNavigateUp() {
-                finish(); // menutup activity
-                return true;
-            }
-
         });
+    }
 }
 
-    }

@@ -71,11 +71,21 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.xwray.passwordview.PasswordView
+            <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password" />
+
+        <LinearLayout
+            android:id="@+id/Linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tvPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
 
             <Button
                 android:id="@+id/btnDaftar"
@@ -83,14 +93,16 @@
                 android:layout_height="40dp"
                 android:background="@color/colorPrimary"
                 android:text="Daftar"
-                android:textColor="@color/colorWhite"/>
-            
+                android:textColor="@color/colorWhite" />
+
+
+
+        </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dengan mendaftar, saya menyetujui syarat dan ketentuan, serta kebijakan privasi"
                 android:layout_marginTop="10dp"/>
-
 
 
         </LinearLayout>
@@ -117,8 +129,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="  Masuk"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimary"/>
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
 
         </LinearLayout>
     

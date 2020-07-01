@@ -28,7 +28,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email atau username"/>
+                    android:hint="Email atau username" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,18 +38,19 @@
                 android:hint="Password" />
 
             <Button
+                android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="MASUK"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite"/>
-            
+                android:text="MASUK"
+                android:textColor="@color/colorWhite" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center|right"
                 android:text="Lupa password?" />
-            
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -58,17 +59,17 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1px"
-                    android:background="@color/colorGrey"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorGrey" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:padding="10dp"
                     android:background="@color/colorWhite"
-                    android:text="Atau"/>
+                    android:padding="10dp"
+                    android:text="Atau" />
 
 
             </RelativeLayout>
@@ -76,18 +77,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@mipmap/ic_google_foreground"/>
+                    android:src="@mipmap/ic_google_foreground" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@mipmap/ic_facebook_foreground"/>
+                    android:src="@mipmap/ic_facebook_foreground" />
 
             </LinearLayout>
 
@@ -109,7 +110,6 @@
             android:text="Belum Punya Akun?"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"/>
-
         <TextView
             android:id="@+id/txtSingup"
             android:layout_width="wrap_content"
@@ -117,16 +117,10 @@
             android:text="  Daftar"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"/>
-        
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:scrollbars="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/txtSingup">
 
-        </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.example.ecommerce.Rest;
 
+import com.example.ecommerce.Model.Daftar;
 import com.example.ecommerce.Model.GetDaftar;
 import com.example.ecommerce.Model.PostPutDelDaftar;
 
@@ -16,23 +17,20 @@ import retrofit2.http.PUT;
 public interface ApiInterface {
     @GET("daftar_android")
     Call<GetDaftar> getDaftar();
+//    @FormUrlEncoded
+//    @POST("daftar_android")
+//    Call<PostPutDelDaftar> postDaftar(String string, String toString, String s, @Field("fullname") String nama,
+//                                      @Field("email") String email);
     @FormUrlEncoded
-    @POST("daftar_android")
-    Call<PostPutDelDaftar> postDaftar(@Field("fullname") String nama,
-                                      @Field("email") String email,
-                                      @Field("password") String password,
-                                      @Field("gender") String gender);
-    @FormUrlEncoded
-    @PUT("daftar_android")
-    Call<PostPutDelDaftar> putDaftar(@Field("id_user") String id_user,
-                                     @Field("fullname") String nama,
-                                     @Field("email") String email,
-                                     @Field("password") String password,
-                                     @Field("gender") String gender,
-                                     @Field("address") String address,
-                                     @Field("1") String is_active,
-                                     @Field("date_created") String date_created);
+    @POST("daftar")
+    Call<Daftar> postDaftar2(@Field("fullname") String fullname,
+                             @Field("email") String email,
+                             @Field("password") String password,
+                             @Field("gender") String gender,
+                             @Field("address") String address);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "daftar", hasBody = true)
     Call<PostPutDelDaftar> deleteDaftar(@Field("id_user") String id_user);
+
+    Call<PostPutDelDaftar> putDaftar(String toString, String toString1, String toString2, String toString3, String toString4);
 }

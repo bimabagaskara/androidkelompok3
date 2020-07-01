@@ -9,21 +9,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
-        <TextView
-            android:id="@+id/tvId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Id"
-            android:layout_alignParentRight="true"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            />
+
         <TextView
             android:id="@+id/tvNama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Nama"
-            android:layout_below="@id/tvId"
             android:textSize="15sp"
             />
 
@@ -62,27 +53,6 @@
             android:textSize="15sp"
             android:layout_below="@+id/tvAddress"
             />
-
-        <TextView
-            android:id="@+id/tvIs_active"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Is_active"
-            android:layout_below="@id/tvGender"
-            android:textSize="15sp"
-            />
-
-        <TextView
-            android:id="@+id/tvDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Date"
-            android:layout_below="@id/tvIs_active"
-            android:textSize="15sp"
-            />
-
-
-
 
     </RelativeLayout>
     <View
