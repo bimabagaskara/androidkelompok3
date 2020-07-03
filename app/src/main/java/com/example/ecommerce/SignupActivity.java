@@ -42,7 +42,7 @@ public class SignupActivity extends AppCompatActivity {
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<Daftar> postDaftar = mApiInterface.postDaftar2(fullname.getText().toString(),email.getText().toString(),gender.getText().toString(),address.getText().toString(),password.getText().toString());
+                Call<Daftar> postDaftar = mApiInterface.postDaftar2(fullname.getText().toString(),email.getText().toString(),password.getText().toString(),gender.getText().toString(),address.getText().toString());
                 postDaftar.enqueue(new Callback<Daftar>() {
                     @Override
                     public void onResponse(Call<Daftar> call, Response<Daftar> response) {
