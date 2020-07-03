@@ -1,5 +1,6 @@
 package com.example.ecommerce.Adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import java.util.List;
 
 public class DaftarAdapter extends RecyclerView.Adapter<DaftarAdapter.MyViewHolder> {
     List<Daftar> mDaftarlist;
+    private Context context;
+
 
     public DaftarAdapter(List <Daftar> Daftarlist){
         mDaftarlist = Daftarlist;

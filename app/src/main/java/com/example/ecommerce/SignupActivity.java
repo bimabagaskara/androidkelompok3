@@ -55,6 +55,8 @@ public class SignupActivity extends AppCompatActivity {
                     }
 
                 });
+
+
                 getSupportActionBar().setTitle("Daftar");
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);

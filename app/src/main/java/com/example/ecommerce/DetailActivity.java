@@ -77,10 +77,10 @@ public class DetailActivity extends AppCompatActivity implements BaseSliderView.
         });
 
         HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("Hannibal",R.drawable.product2);
-        file_maps.put("Big Bang Theory",R.drawable.product4);
-        file_maps.put("House of Cards",R.drawable.product2);
-        file_maps.put("Game of Thrones", R.drawable.product1);
+        file_maps.put("Rice Cooker",R.drawable.product2);
+        file_maps.put("Blender",R.drawable.product4);
+        file_maps.put("Rice Cooker",R.drawable.product2);
+        file_maps.put("Kulkas", R.drawable.product1);
 
         for(String name : file_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(this);

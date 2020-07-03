@@ -26,13 +26,15 @@
                 android:layout_marginTop="20dp">
 
                 <EditText
+                    android:id="@+id/edtnama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email atau username" />
+                    android:hint="Username" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.xwray.passwordview.PasswordView
+                android:id="@+id/pvPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password" />

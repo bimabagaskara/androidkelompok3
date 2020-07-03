@@ -66,7 +66,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Rp 20.000"
+                            android:text="Rp 1.500.000"
                             android:textStyle="bold"
                             android:gravity="right"/>
 
@@ -136,7 +136,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/product3"/>
+                            android:src="@drawable/product1"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -151,7 +151,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Rp 20.000"/>
+                                android:text="Rp 1.500.000"/>
 
                         </LinearLayout>
 
@@ -221,7 +221,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text=": 087838xxxxxx" />
+                            android:text=": 087838052230" />
 
                     </LinearLayout>
 
@@ -332,17 +332,8 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Telepon"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text=": 087838xxxxxx" />
+
 
                     </LinearLayout>
 

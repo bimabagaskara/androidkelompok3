@@ -51,21 +51,22 @@ public class StoreActivity extends AppCompatActivity {
     private void setProduct() {
         for (int i = 1; i <= 10; i++) {
             HashMap<String, String> map = new HashMap<>();
-            map.put("price", String.valueOf(i) + "10.000");
+            map.put("price", String.valueOf(i) + "1.500.000");
             map.put("seller", "Sumber Rezeki Listrik");
             arrayList.add(map);
 
         }
 
-        simpleAdapter = new SimpleAdapter(StoreActivity.this, arrayList, R.layout.adapter_product,
-                new String[]{"price", "seller"},
-                new int[] {R.id.txtPrice, R.id.txtSeller});
-        grdProduct.setAdapter(simpleAdapter);
-        grdProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String harga = ((TextView) view.findViewById(R.id.txtPrice)).getText().toString();
-                Toast.makeText(getApplicationContext(), harga, Toast.LENGTH_LONG).show();
+
+                simpleAdapter = new SimpleAdapter(StoreActivity.this, arrayList, R.layout.adapter_product,
+                        new String[]{"price", "seller"},
+                        new int[] {R.id.txtPrice, R.id.txtSeller});
+                grdProduct.setAdapter(simpleAdapter);
+                grdProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String harga = ((TextView) view.findViewById(R.id.txtPrice)).getText().toString();
+                        Toast.makeText(StoreActivity.this, harga, Toast.LENGTH_LONG).show();
 
                 //Pindah activity
                 startActivity(new Intent(

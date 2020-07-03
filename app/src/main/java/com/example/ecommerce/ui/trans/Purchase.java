@@ -44,9 +44,9 @@ public class Purchase extends Fragment {
     }
 
     private void setPurchase() {
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 1; i++) {
             HashMap<String, String> map = new HashMap<>();
-            map.put("price",  "Rp 100.000");
+            map.put("price",  "Rp 1.500.000");
             arrayList.add(map);
 
         }

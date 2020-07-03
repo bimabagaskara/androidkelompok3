@@ -45,7 +45,7 @@ public class Product extends Fragment {
     private void setProduct() {
         for (int i = 1; i <= 10; i++) {
             HashMap<String, String> map = new HashMap<>();
-            map.put("price", String.valueOf(i) + "10.000");
+            map.put("price", String.valueOf(i) + "1.500.000");
             map.put("seller", "Sumber Rezeki Listrik");
             arrayList.add(map);
 

@@ -42,7 +42,7 @@ public class NotifActivity extends AppCompatActivity {
     private void setNotif() {
         for (int i = 1; i <= 10; i++) {
             HashMap<String, String> map = new HashMap<>();
-            map.put("title", "Lorem Ipsum" + String.valueOf(i));
+            map.put("title", "Pesanan di konfirmasi");
             arrayList.add(map);
 
         }

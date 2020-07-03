@@ -44,14 +44,14 @@ public class Sales extends Fragment {
 
     private void setSales() {
 
-        String [] product = {"product2", "product4"};
-        String [] title = {"Rice Cooker",  "Blender"};
-        String [] date = {"Januari, 12 2019 - 10pm", "Januari, 13 2019"};
+        String [] product = {"product1"};
+        String [] title = {"Kulkas"};
+        String [] date = {"Januari, 13 2020"};
 
         //status
-        String [] shipment = {"Dikirim", "dikirim"};
-        String [] drop      = {"diterima", "ditolak" };
-        String [] finish    = {"selesai", "pengembalian"};
+        String [] shipment = {"dikirim"};
+        String [] drop      = {"ditolak" };
+        String [] finish    = {"pengembalian"};
 
 
         for (int i = 0; i < title.length; i++) {

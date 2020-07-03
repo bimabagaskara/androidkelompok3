@@ -15,12 +15,9 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 
 public interface ApiInterface {
-    @GET("daftar_android")
+    @GET("daftar")
     Call<GetDaftar> getDaftar();
-//    @FormUrlEncoded
-//    @POST("daftar_android")
-//    Call<PostPutDelDaftar> postDaftar(String string, String toString, String s, @Field("fullname") String nama,
-//                                      @Field("email") String email);
+
     @FormUrlEncoded
     @POST("daftar")
     Call<Daftar> postDaftar2(@Field("fullname") String fullname,
@@ -31,6 +28,7 @@ public interface ApiInterface {
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "daftar", hasBody = true)
     Call<PostPutDelDaftar> deleteDaftar(@Field("id_user") String id_user);
+
 
     Call<PostPutDelDaftar> putDaftar(String toString, String toString1, String toString2, String toString3, String toString4);
 }

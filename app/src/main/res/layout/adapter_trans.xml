@@ -20,7 +20,7 @@
                 android:id="@+id/imgProduct"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:src="@drawable/product3"
+                android:src="@drawable/product1"
                 android:adjustViewBounds="true"/>
             <LinearLayout
                 android:orientation="vertical"
@@ -33,13 +33,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Nama Produk"/>
+                    android:text="Kulkas"/>
 
                 <TextView
                     android:id="@+id/txtDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rp 118.000"
+                    android:text="Rp 1.500.000"
                     android:textSize="12sp"/>
 
                 <LinearLayout
