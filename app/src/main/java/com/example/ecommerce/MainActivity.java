@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,6 +33,8 @@ import androidx.viewpager.widget.ViewPager;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
 
     MaterialSearchView searchView;
     public static MainActivity ma;
@@ -178,6 +181,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        pref = getApplicationContext().getSharedPreferences("Users", 0); // untuk manggil data
+        editor = pref.edit();
 
         if (id == R.id.nav_notif) {
             startActivity(new Intent(MainActivity.this, NotifActivity.class));
@@ -193,6 +198,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         } else if (id == R.id.nav_logout) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            editor.putBoolean("isLogin", false);
+            editor.apply();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
